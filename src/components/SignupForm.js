@@ -32,7 +32,7 @@ class SignupForm extends Component {
             );
         return (
             <div className="row">
-            <form onSubmit={this.onSubmit} className="col-sm-6 col-sm-offset-3">
+            <form onSubmit={this.onSubmit} >
                 <h1>Join our community!</h1>
 
                 <div className="form-group">
