@@ -38,7 +38,7 @@ class SignupForm extends Component {
         if(val_return.isValid){
             this.props.addFlashMessage({
                 type:'success',
-                text:'You Signed up Successfully, Welcome'
+                text:'You Signed up Successfully, Welcome!'
             })
             history.push('/');
             // this.setState({errors: {}, isLoading: true});
