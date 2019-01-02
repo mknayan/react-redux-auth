@@ -23,7 +23,13 @@ class SignupForm extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.userSignupRequest(this.state);
+        if(this.isValid()){
+            this.setState({errors: {}, isLoading: true });
+            this.props.userSignupRequest(this.state).then(
+                ({data}) => this.setState({errors:data,isLoading:false})
+            );
+        }
+       
     }
 
     render() { 
